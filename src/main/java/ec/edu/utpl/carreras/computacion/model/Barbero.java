@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="barbero")
+@NamedQuery(name="Barbero.getById", query = "SELECT b FROM Barbero b WHERE b.id =:id_barbero")
 public class Barbero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

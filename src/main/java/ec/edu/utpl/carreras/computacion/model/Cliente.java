@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
+@NamedQueries({
+        @NamedQuery(name = "Cliente.getById", query = "SELECT c FROM Cliente c WHERE c.id = :id_cliente")
+})
 public class Cliente {
 
     @Id
